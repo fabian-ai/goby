@@ -154,7 +154,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Paper Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Leading large language models (LLMs) are trained on public data.
@@ -174,6 +174,65 @@
             with public data.
           </p>
         </div>
+      </div>
+    </div>
+</section>
+
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            The <strong>GOBY Benchmark Dataset</strong> is designed to aid in evaluating data integration methods on structured enterprise data. This dataset includes categories, entities, and results derived from various data sources, represented in a unified schema. Key components include:
+          </p>
+          <ul>
+            <li><strong>Tags</strong>: Attributes within the unified schema.</li>
+            <li><strong>Results</strong>: Records sourced from wrappers, often web scrapers targeting specific sites.</li>
+            <li><strong>Entities</strong>: Records from original data sources, represented with "tags" that correspond to unified attributes.</li>
+            <li><strong>Wrappers</strong>: Data sources, typically web scrapers generating structured output.</li>
+          </ul>
+        </div>
+
+        <h2 class="title is-3">Contents of Goby</h2>
+        <div class="content has-text-justified">
+          <p>
+            The primary data archive, <code>goby.tar.gz</code>, contains the following key directories:
+          </p>
+          <ul>
+            <li><code>dump/</code>: PostgreSQL dump files that include:
+              <ul>
+                <li><code>doit_categories</code>: Data categories with record counts.</li>
+                <li><code>doit_data</code>: Triple-based data representing (category_id, source_id, entity_id, name, value).</li>
+                <li>Additional mapping and result files.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <h2 class="title is-3">Download Instructions</h2>
+        <div class="content has-text-justified">
+          <p>
+            To access the GOBY dataset:
+          </p>
+          <ol>
+            <li>Download the <code>goby.zip</code> file from the repository (link forthcoming).</li>
+            <li>Extract it using a tool like <code>unzip -P your_password goby.zip -d /path/to/extract/</code>.</li>
+          </ol>
+        </div>
+
+        <h2 class="title is-3">Usage Instructions</h2>
+        <div class="content has-text-justified">
+          <p>
+            Once downloaded, use the following steps to explore and integrate the dataset:
+          </p>
+          <ol>
+            <li><strong>Explore the Data Structure</strong>: Familiarize yourself with the files within the <code>dump/</code> directory.</li>
+            <li><strong>Run Data Integration Tests</strong>: Use the provided scripts to test your integration methods against the dataset.</li>
+          </ol>
+        </div>
+
         <h2 class="title is-3">Download the Goby Benchmark</h2>
         <div class="content has-text-justified">
           <p>
@@ -193,6 +252,8 @@
             <span>Download ZIP (coming soon)</span>
           </a>
         </div>
+
+
       </div>
     </div>
   </div>
@@ -227,6 +288,8 @@
     </div>
   </div>
 </footer>
+
+
 
 <!-- Statcounter tracking code -->
 
